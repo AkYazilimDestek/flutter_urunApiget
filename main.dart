@@ -28,7 +28,7 @@ class _IskeleState extends State<_Iskele> {
   late List productList;
   late bool loading = true;
   getAllProducts() async {
-    var response = await http.get(Uri.parse("https://static.eserislamiilimlermedresesi.com/urunler.json"));
+    var response = await http.get(Uri.parse("https://raw.githubusercontent.com/AkYazilimDestek/flutter_urunApiget/main/urunler.json"));
     if (response.statusCode == 200){
       setState(() {
         productList = json.decode(response.body);
